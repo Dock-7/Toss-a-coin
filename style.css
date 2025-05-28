@@ -1,0 +1,167 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(-45deg, #ff6b6b, #f7d794, #74b9ff, #a29bfe);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes spin {
+      from { transform: rotateY(0deg); }
+      to { transform: rotateY(3600deg); }
+    }
+
+.container {
+  text-align: center;
+  color: rgb(244, 244, 244);
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #526787;
+  color: #f1f3f5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #189890;
+
+}
+
+#coin {
+  width: 180px;
+  height: 180px;
+  margin: 20px auto;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* 3D Perspective Container */
+  perspective: 1000px;
+}
+
+#coinImage {
+  width: 85%;
+  height: 75%;
+  object-fit: contain;
+  border-radius: 50%;
+  
+}
+
+.rotating {
+  animation: spin3D 1s ease-in-out;
+
+}
+
+@keyframes spin3D {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(3600deg) rotateY(3600deg) rotateZ(3600deg); /* Multiple spins */
+  }
+}
+/* Navbar Styles */
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #c9d750;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.coinSection {
+  text-align: center;
+  flex: 1;
+}
+
+.historyContainer {
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 50px;
+  margin-right: 100px;
+  border-radius: 10px;
+  color: white;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.history {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 5px;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history ul li {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 6px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+/* Optional scrollbar styling */
+.history::-webkit-scrollbar {
+  width: 6px;
+}
+.history::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
